@@ -1,0 +1,866 @@
+/* Global Reset */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar */
+nav {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Background */
+.background {
+    position: relative;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+/* Logo */
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 180px;
+    height: auto;
+    z-index: 10;
+    filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* Header Text */
+.animated-text {
+    margin-left: -140%;
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 20;
+    color: white; /* Clean white */
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.8); /* Soft shadow for better contrast*/
+    animation: fade-in 1.5s ease-in-out;
+}
+
+/* Subtext (Improved Visibility) */
+.subtext {
+    margin-left: -57%;
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 2px;
+    padding: 18px;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.6); /* Darker background for readability */
+    border-radius: 12px;
+    text-align: center;
+    color: white; /* Clean white text */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.6);
+    animation: fade-in 1.8s ease-in-out 0.5s both;
+}
+
+ /*Keyframe Animation*/ 
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Image on Right */
+.image-container {
+    position: absolute;
+    right: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-image {
+    padding-top: 10vh;
+    width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.167);
+    animation: fade-in 1.4s ease-in-out 0.5s both;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .background {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    .right-image {
+        width: 250px;
+    }
+}
+
+/* Counter Section */
+.counter-container {
+    display: flex;
+    margin-left: -60%;
+    justify-content: left;
+    gap: 50px;
+    margin-top: 20px;
+    width: px;
+}
+
+.counter {
+    font-size: 42px;
+    font-weight: bold;
+    color: rgb(252, 240, 240);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.933);
+}
+
+.counter-text {
+    font-size: 18px;
+    color: white;
+}
+
+/* Keyframe Animation for Counter */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Movie Slider Section */
+
+.dev{
+    background-color: #000000;
+    font-size: 30px;
+    color: #ffffff;
+    animation:fade-in 1.4s ease-in-out 0.5s both;
+}
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to right, #000000, #0b0c10, #000000);
+    padding: 20px 0;
+}
+
+/* Infinite Scrolling Animation */
+.slider-track {
+    display: flex;
+    gap: 15px;
+    width: 200%;
+    animation: scroll 12s linear infinite alternate;
+}
+
+/* Movie Posters */
+.slider-track img {
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 3px solid rgba(255, 217, 0, 0.844);
+}
+
+/* Poster Hover Effect */
+.slider-track img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 2px rgb(251, 222, 56);
+}
+
+/* Scrolling Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(05%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* Why Choose Us Section */
+.why-choose {
+    text-align: center;
+    padding: 60px 10px;
+    background: linear-gradient(to right, #000000, #0b0c10, #000000);
+}
+
+.why-choose h2 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif; /* Unique futuristic font */
+    color: white;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #a03eff; /* Neon purple effect */
+}
+
+/* Feature Cards */
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(50, 10, 80, 0.8);
+    border-radius: 12px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(213, 212, 212, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 10px 8px 4px rgba(244, 244, 244, 0.918);
+}
+
+/* Feature Icons */
+.feature-icon {
+    font-size: 50px;
+    color: #ffcc00; /* Gold color for contrast */
+    margin-bottom: 15px;
+}
+
+/* Feature Headings */
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Feature Descriptions */
+.feature-card p {
+    font-size: 14px;
+    color: #ddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Channel Section */
+.channels-section {
+    text-align: center;
+    padding: 30px 0;
+;
+    background: #ffffff;
+}
+
+/* Section Heading */
+.channels-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Slider Wrapper */
+.channels-slider {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Channels Container (for Scrolling) */
+.channels-container {
+    display: flex;
+    gap: 40px;
+    animation: scroll 10s linear infinite;
+}
+
+/* Channel Logos */
+.channels-container img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.channels-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframes for Scrolling */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .channels-container img {
+        width: 120px;
+    }
+}
+
+
+
+/* 🎨 Highlights Section - Magnolia & Ivory Gradient */
+.highlights-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #F8F4FF, #FFFFF0); /* Magnolia to Ivory */
+}
+
+/* Section Titles */
+.highlights-title {
+    font-size: 2.5em;
+    color: #333; /* Dark Grey */
+    margin-bottom: 10px;
+}
+
+.highlights-subtitle {
+    font-size: 1.2em;
+    color: #666; /* Medium Grey */
+    margin-bottom: 30px;
+}
+
+/* 🟦 Grid Layout - 3 Cards Per Row */
+.highlights-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 25px;
+    max-width: 1300px; /* Increased width */
+    margin: 0 auto;
+}
+
+/* 📦 Highlight Box */
+.highlight-box {
+    background: linear-gradient(135deg, #EEE8AA, #DCDCDC); /* Light gold & grey */
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    width: 100%; /* Increased width */
+}
+
+/* 🖱️ New Hover Effect */
+.highlight-box:hover {
+    transform: translateY(-7px);
+    border-radius: 20px; /* More rounded on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #FFD700, #BDB76B); /* Rich gold on hover */
+    border: 2px solid #FFD700;
+}
+
+/* 🎨 Icons */
+.highlight-box i {
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #8B4513; /* Rich brown for contrast */
+}
+
+/* 🏷️ Title */
+.highlight-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* 📄 Text */
+.highlight-box p {
+    font-size: 1.1em;
+    color: #444; /* Darker grey for better readability */
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 900px) {
+    .highlights-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .highlights-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row */
+    }
+}
+
+
+
+
+
+/* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 0px 20px;
+    background: #000;
+}
+
+/* Section Heading */
+.pricing-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Plan Container */
+.plan-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* Plan Card */
+.plan-card {
+    background: #111;
+    border: 2px solid orange;
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(255, 165, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Plan Title */
+.plan-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+/* Plan Price */
+.plan-card .price {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Old Price (for discount effect) */
+.plan-card .old-price {
+    font-size: 18px;
+    color: red;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+/* Features List */
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    color: #ddd;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.plan-card ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Checkmark Icon */
+.plan-card ul li::before {
+    content: "✔";
+    color: orange;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+/* Buy Now Button */
+.buy-btn {
+    background: rgb(235, 165, 34);
+    color: black;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.buy-btn:hover {
+    background: #ff9900;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .plan-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* for page 2 channles */
+
+/* Banner */
+.channels-banner {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Channel Info */
+.channels-info {
+    text-align: center;
+    padding: 0px;
+    background: white;
+    color: black;
+    font-size: 18px;
+}
+
+/* Specific styles for the CHANNELS section */
+.channels-container {
+    text-align: center;
+}
+
+.channels-container h1 {
+    font-size: 9em;
+    margin-top: 400px;
+}
+
+.channels-container p {
+    margin-bottom: 200px;
+    color: #ccc;
+}
+
+.channels-container h2 {
+    color: #f4a700;
+}
+
+.channel-box {
+    background-color: black;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #f4a700;
+}
+
+.channel-box:hover {
+    transform: scale(1.05);
+}
+
+.channel-box h3 {
+    margin: 0;
+    color: #f4a700;
+}
+
+/* Styles only for the channel list inside each box */
+.channel-box .channel-list {
+    display: none;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #F8F4FF, #FFFFF0); /* Magnolia to Ivory */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Centered Contact Cards */
+.footer-middle {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Contact Box */
+.contact-box {
+    width: 23%;
+    min-height: 180px;
+    text-align: center;
+    background: linear-gradient(to bottom, #fff4d9, #ffd78c);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-box:hover {
+    background: linear-gradient(to bottom, #ecbe48, #ffbb4d);
+    transform: translateY(-5px);
+    border-radius: 15px;
+}
+
+.contact-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Vertical Line Between Cards */
+.vertical-line {
+    width: 2px;
+    height: 120px;
+    background-color: #ccc;
+}
+
+/* Separator Line Below Cards */
+.separator {
+    width: 90%;
+    height: 2px;
+    background-color: #aaa;
+    margin: 20px auto;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #ff9800;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 80px; /* Adjust as needed */
+    right: 20px;
+    margin-right: 199vh;
+    background-color: #25d366;
+    color: white;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.1);
+}
+
+.whatsapp-float i {
+    font-size: 35px;
+}
+
+
+/*Contact design*/
+
+/* Contact Section */
+.contact-section {
+    padding: 40px;
+}
+
+.contact-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.underline {
+    width: 120px;
+    height: 5px;
+    background-color: #007bff;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    text-align: left;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+}
